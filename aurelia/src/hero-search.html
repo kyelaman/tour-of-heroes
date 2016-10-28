@@ -1,0 +1,12 @@
+<template>
+  <require from="./hero-search.css"></require>
+	<div>
+		<h4>Hero Search</h4>
+		<input ref="searchBox" keyup.delegate="search(searchBox.value) & debounce:300" />
+		<div>
+			<div repeat.for="hero of heroes" click.delegate="gotoDetail(hero)" class="search-result">
+				${hero.name}
+			</div>
+		</div>
+	</div>
+</template>

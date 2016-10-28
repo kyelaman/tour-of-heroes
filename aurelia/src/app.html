@@ -1,0 +1,9 @@
+<template>
+    <require from="./app.css"></require>
+    <h1>${title}</h1>
+    <div class="header-bar"></div>
+    <nav>
+      <a repeat.for="route of router.navigation" href.bind="route.href">${route.title}</a>
+    </nav>
+    <router-view></router-view>
+</template>
